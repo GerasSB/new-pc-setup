@@ -1,8 +1,8 @@
-
+@echo off
 :: Essential
 winget install --id=eloston.ungoogled-chromium -e
 winget install --id=7zip.7zip -e
-winget install --id=Notepad++.Notepad++ -e 
+winget install --id=Notepad++.Notepad++ -e
 winget install --id=File-New-Project.EarTrumpet -e
 winget install --id=Discord.Discord -e
 winget install --id=Audacity.Audacity -e
@@ -13,6 +13,8 @@ winget install --id=VentisMedia.MediaMonkey -e
 winget install --id=qBittorrent.qBittorrent -e
 winget install --id=Valve.Steam -e
 winget install --id=Soulseek.SoulseekQt -e
+winget install --id=voidtools.Everything -e
+winget install --id=Flow-Launcher.Flow-Launcher -e
 
 :: Dev
 winget install --id=Microsoft.VisualStudioCode -e
@@ -41,5 +43,7 @@ winget install --id=Microsoft.PowerShell
 winget install JanDeDobbeleer.OhMyPosh -s winget
 winget install --id=DEVCOM.JetBrainsMonoNerdFont -v "2.3.3" -e
 winget install --id=Microsoft.WindowsTerminal  -e
-echo Done installing all programs. Run "2-runPowerShell.bat" next
+echo.
+echo Done installing all programs. Make sure you set up Flow Launcher
+echo to use Everything for search, then run "2-runPowerShell.bat"
 pause
