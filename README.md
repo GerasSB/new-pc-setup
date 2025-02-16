@@ -2,12 +2,16 @@ Initial setup for a new PC
 
 # Usage
 
-1. Run `1-winstallALL.bat` to install all software found inside the file.
-1. Set up Flow Launcher to use Everything as the search (under `Plugins >
+1. Run in an Administrator Powershell window:
+
+    ```ps1
+    irm "https://raw.githubusercontent.com/GerasSB/new-pc-setup/refs/heads/main/setup.ps1" | iex
+    ```
+
+1. Set up _Flow Launcher_ to use _Everything_ as the search (under `Plugins >
    Explorer > General Settings`).
    * You should also set both of them to hide from the tray in their respective
      settings.
-1. Run `2-runPowershell.bat` to setup the Windows Terminal.
 1. Manually change the terminal settings to:
     * Theme to `One Half Dark`
     * Font to `JetBrains NF`
@@ -15,7 +19,7 @@ Initial setup for a new PC
     * Opacity to `75%`
 
 # Extra features
-The `2-runPowershell.bat` script adds a few more things aside from just making
+The `terminalSetup.ps1` script adds a few more things aside from just making
 the terminal prettier: 
 * Adds `fzf_dir`, a command to only search directories with fzf and open them
   in Windows Explorer.
@@ -28,7 +32,10 @@ the terminal prettier:
       your file will be up for, go
       [here](https://www.wolframalpha.com/input?i=30+%2B+%28-365+%2B++30%29+*+pow%28%28x%2F512+-+1%29%2C+3%29+where+x+%3D+200)
       and replace `x = 200` for the size of your file in megabytes (also set
-      result to decimal).
+      result to decimal). The decimal result is how many days the file will be
+      up for.
+* Adds `md5`, a command to get the md5 hash of any file.
+* Adds `compresstga`, a command that compresses TGA files in the current directory using ImageMagick.
 
 # Known issues
 * All the custom `fzf` commands have problems dealing with paths containing
