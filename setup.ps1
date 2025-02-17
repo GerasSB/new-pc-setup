@@ -42,7 +42,5 @@ if (Test-Path $path) {
 Clear-Host
 Write-Host "All installs done! Make sure you set up Flow Launcher" -ForegroundColor Green
 Write-Host "to use Everything for search." -ForegroundColor Green
-Start-Process pwsh
-Start-Sleep -Seconds 5
-Stop-Process -Name pwsh
+Invoke-Command { & "powershell.exe" } -NoNewScope # PowerShell 5 refresh
 Start-Process pwsh -ArgumentList "-NoExit", "-Command irm 'https://raw.githubusercontent.com/GerasSB/new-pc-setup/refs/heads/main/terminalSetup.ps1' | iex"
