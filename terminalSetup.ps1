@@ -19,11 +19,11 @@ Write-Host "Creating fzf_file alias..." -ForegroundColor Green
 Add-Content $PROFILE 'function fzf_file { Param($dir=".") fd $dir -t f -H -I| fzf | ii }'
 Write-Host "Creating MD5 alias..." -ForegroundColor Green
 Add-Content $PROFILE 'function md5 { Param($f) Get-FileHash $f -algorithm md5 }'
-Write-Host "Creating compresstga alias..."
+Write-Host "Creating compresstga alias..." -ForegroundColor Green
 Add-Content $PROFILE 'function compresstga { magick mogrify -format tga *.tga }'
 . $PROFILE
 Clear-Host
-Write-Output "Done! All that's left is setting up the JetBrains font in the Windows"
-Write-Output "Terminal, changing the theme to One Half Dark, and adjusting opacity to 75"
+Write-Host "Done! All that's left is setting up the JetBrains font in the Windows" -ForegroundColor Green
+Write-Host "Terminal, changing the theme to One Half Dark, and adjusting opacity to 75" -ForegroundColor Green
 cmd /c 'pause'
 wt

@@ -96,6 +96,9 @@ if (Test-Path $path) {
 
 # Done
 Clear-Host
-Write-Output "All installs done! Make sure you set up Flow Launcher" -ForegroundColor Green
-Write-Output "to use Everything for search." -ForegroundColor Green
+Write-Host "All installs done! Make sure you set up Flow Launcher" -ForegroundColor Green
+Write-Host "to use Everything for search." -ForegroundColor Green
+Start-Process pwsh
+Start-Sleep -Seconds 5
+Stop-Process -Name pwsh
 Start-Process pwsh -ArgumentList "-NoExit", "-Command irm 'https://raw.githubusercontent.com/GerasSB/new-pc-setup/refs/heads/main/terminalSetup.ps1' | iex"
