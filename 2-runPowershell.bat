@@ -1,1 +1,0 @@
-pwsh -ExecutionPolicy Bypass -command "%CD%\terminalSetup.ps1"
