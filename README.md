@@ -36,6 +36,7 @@ the terminal prettier:
       up for.
 * Adds `md5`, a command to get the md5 hash of any file.
 * Adds `compresstga`, a command that compresses TGA files in the current directory using ImageMagick.
+* Adds `twitch`, a command that opens a twitch stream with streamlink plus an adblock addon.
 
 # Known issues
 * All the custom `fzf` commands have problems dealing with paths containing
