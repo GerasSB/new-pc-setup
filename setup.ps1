@@ -82,19 +82,19 @@ Update-Path
 mpv.exe
 Start-Sleep -Seconds 5
 Stop-Process -Name mpv
-$path = "$env:APPDATA\mpv\input.conf"
+$conf_path = "$env:APPDATA\mpv\input.conf"
 $lines = "WHEEL_UP seek 10`nWHEEL_DOWN seek -10"
 
 # Check if the file exists
-if (Test-Path $path) {
+if (Test-Path $conf_path) {
     # Append lines if they are not already present
-    if (-not (Select-String -Path $path -Pattern "WHEEL_UP seek 10" -SimpleMatch) -or 
-        -not (Select-String -Path $path -Pattern "WHEEL_DOWN seek -10" -SimpleMatch)) {
-        Add-Content -Path $path -Value "`n$lines"
+    if (-not (Select-String -Path $conf_path -Pattern "WHEEL_UP seek 10" -SimpleMatch) -or 
+        -not (Select-String -Path $conf_path -Pattern "WHEEL_DOWN seek -10" -SimpleMatch)) {
+        Add-Content -Path $conf_path -Value "`n$lines"
     }
 } else {
     # Create file and add lines
-    Set-Content -Path $path -Value $lines
+    Set-Content -Path $conf_path -Value $lines
 }
 
 # Done
