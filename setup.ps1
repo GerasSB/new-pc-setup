@@ -8,7 +8,7 @@ winget install --id=Audacity.Audacity -e
 winget install --id=gerardog.gsudo -e
 winget install --id=yt-dlp.yt-dlp -e
 winget install --id=Syncplay.Syncplay -e
-winget install --id=VentisMedia.MediaMonkey -e
+winget install --id=VentisMedia.MediaMonkey.2024 -e
 winget install --id=qBittorrent.qBittorrent -e
 winget install --id=Valve.Steam -e
 winget install --id=Soulseek.SoulseekQt -e
@@ -22,6 +22,7 @@ winget install --id=AppWork.JDownloader  -e
 winget install --id=TheDocumentFoundation.LibreOffice  -e
 winget install --id=Mozilla.Firefox  -e
 winget install --id=Telegram.TelegramDesktop  -e
+winget install --id=ThioJoe.SvgThumbnailExtension -e
 
 # Dev
 winget install --id=Microsoft.VisualStudioCode -e
@@ -42,6 +43,7 @@ winget install --id=SumatraPDF.SumatraPDF  -e
 winget install --id=calibre.calibre  -e
 winget install --id=ImageMagick.ImageMagick  -e
 winget install --id=VideoLAN.VLC  -e
+winget install --id=Streamlink.Streamlink -e
 
 # Other
 winget install --id=OBSProject.OBSStudio -e
@@ -53,6 +55,7 @@ winget install --id=CPUID.HWMonitor  -e
 winget install --id=DWANGO.OpenToonz.Nightly  -e
 winget install --id=Proton.ProtonVPN  -e
 winget install --id=Obsidian.Obsidian  -e
+winget install --id=Microsoft.Edit -e
 
 # Powershell / Terminal Setup
 winget install --id=junegunn.fzf -e
